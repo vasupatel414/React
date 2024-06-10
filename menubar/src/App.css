@@ -1,0 +1,59 @@
+.menu
+{
+  width: 20%;
+  text-align: left;
+  left: -100%;
+  position: fixed;
+  height: 40%;
+  background-color: yellow;
+}
+
+.enquire
+{
+position: fixed;
+right: -30px;
+top: 100px;
+transform: rotate(90deg);
+}
+.model
+{
+  width: 320px;
+  position: fixed;
+  text-align: center;
+  height: 320px;
+  left: 40%; 
+  top: -500px;
+  transition: 0.3s;
+  /* transform: translate(-50%,-50%); */
+  background-color: white;
+
+}
+.showmodel
+{
+top: 25%;
+left: 40%;
+}
+.log
+{
+  display: none;
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.activelog{
+display: block;
+}
+
+.enquire button{
+  rotate: 90deg;
+}
+.activemenu
+{
+  left: 0%;
+}
+
+.menu ul li
+{
+padding: 10px 0px;
+}
