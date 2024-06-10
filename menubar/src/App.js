@@ -1,16 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { questions } from './data/faq';
 
 
 
 function App() {
   let [state, setstate] = useState(false);
   let [statex, setstatex] = useState(false);
+  let [stateans, setstateans] = useState(questions[0].id);
   return (
     <div className='App'>
  
-      
+ <div>
+<h1>Frequently Asked Questions</h1>
+
+   <div className='freq'>
+
+    {questions.map((faqitems,i)=>
+    {
+      return(
+          <div className='freqitems'>
+          <h2 onClick={()=>setstateans(faqitems.id)}>{faqitems.Questions}</h2>
+          <p className={stateans==faqitems.id ? 'activeans' :''}>{faqitems.Answers}</p>
+          </div>
+      )
+    }
+     ) 
+    }
+    
+ </div>
+ </div>
+    
+
       <button className='enquire'  onClick={() => setstatex(true)}>
           Enquirey Now
         </button>
