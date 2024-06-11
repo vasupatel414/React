@@ -2,17 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { questions } from './data/faq';
-
-
+import Faqs from './Faqs';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer,NotificationManager } from 'react-notifications';
 
 function App() {
   let [state, setstate] = useState(false);
   let [statex, setstatex] = useState(false);
   let [stateans, setstateans] = useState(questions[0].id);
+
+  let notifications=()=>{
+    NotificationManager.success('Success message', 'Title here');
+  };
   return (
     <div className='App'>
  
- <div>
+ <button onClick={notifications}>Save</button>
+
+ <NotificationContainer></NotificationContainer>
+ 
+ {/* <div>
 <h1>Frequently Asked Questions</h1>
 
    <div className='freq'>
@@ -30,7 +39,7 @@ function App() {
     }
     
  </div>
- </div>
+ </div> */}
     
 
       <button className='enquire'  onClick={() => setstatex(true)}>
@@ -67,7 +76,7 @@ function App() {
       </ul>
 
     </div>
-      
+      <Faqs></Faqs>
     </div>
   );
 }
