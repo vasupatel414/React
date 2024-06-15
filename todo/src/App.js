@@ -1,7 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer,NotificationManager } from 'react-notifications';
+let notifications = () => {
+  NotificationManager.warning('Already exists');
+};
+let notificationsx = () => {
+  NotificationManager.success('Successfully saved');
+};
 function App() {
   let [todolist, settodolist] = useState([])
   let savetodolist = (event) => {
@@ -10,9 +17,10 @@ function App() {
     if (!todolist.includes(toname)) {
       let finaldolist = [...todolist, toname]
       settodolist(finaldolist)
+      notificationsx()
     }
     else {
-      alert("already exists")
+      notifications()
     }
     event.preventDefault();
 
@@ -24,7 +32,9 @@ let list=todolist.map((value,index)=>{
   )
 })
   return (
+    
     <div className="App">
+      <NotificationContainer></NotificationContainer>
       <h1>Todo list</h1>
 
       <form onSubmit={savetodolist}>
