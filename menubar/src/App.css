@@ -95,3 +95,30 @@ h1{
   padding: 10px !important;
 }
 
+.tabsouter{
+  width: 1170px;
+  margin: auto;
+}
+
+.tabsouter ul{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.tabsouter ul li{
+  list-style-type: none;
+}
+
+.tabsouter ul li button{
+background-color: bisque;
+border: none;
+color: blueviolet;
+padding: 0.5rem 20px;
+margin-right: 18px;
+font-weight: 600;
+}
+
+.activebutton{
+  background-color: brown !important;
+}
