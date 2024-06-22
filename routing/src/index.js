@@ -41,6 +41,7 @@ let allroutes=createBrowserRouter(
 
   ]
 )
+
 root.render(
   <React.StrictMode>
 <RouterProvider router={allroutes}></RouterProvider>
