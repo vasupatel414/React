@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { questions } from './data/faq';
 import Faqs from './Faqs';
 import 'react-notifications/lib/notifications.css';
@@ -23,9 +23,22 @@ function App() {
     NotificationManager.success('Success message', 'Title here');
   };
  
+  let [statee, setstatee] = useState(1);
+  let counter = () => {
+    setstatee(statee + 1)
+  }
+  
+  useEffect(() => {
+    console.log("helloji")
+    console.log("hellhjgyfjhoji")
+  },[statee])
+
   return (
     <div className='App'>
-
+<div >
+  {statee}
+        <button onClick={counter}>change</button>
+</div>
       <button onClick={notifications}>Save</button>
 
       <NotificationContainer></NotificationContainer>
