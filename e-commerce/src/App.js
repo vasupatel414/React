@@ -18,7 +18,6 @@ let [catname,setcatname]=useState('')
       setfinal(finalres)
     })
     }
-
   let getproducts = () => {
     axios.get('https://dummyjson.com/products')
       .then((resx) => resx.data)
