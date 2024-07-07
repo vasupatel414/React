@@ -69,6 +69,7 @@ let copy=()=>{
       <button className='btn' onClick={createpassword}>Generate Password</button>
     </div>
     
+
   );
 }
 
